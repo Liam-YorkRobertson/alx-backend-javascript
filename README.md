@@ -1,1 +1,1 @@
-In this repository we are going to be learning and working with ES6 basics.
+In this repository we are going to be learning and mastering back-end javascript.
