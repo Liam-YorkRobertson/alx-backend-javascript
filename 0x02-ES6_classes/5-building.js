@@ -7,10 +7,10 @@ export default class Building {
         );
       }
     }
-    if (typeof sqft !== 'number') {
-      throw new TypeError('sqft must be a number');
-    } else {
+    if (typeof sqft === 'number') {
       this._sqft = sqft;
+    } else {
+      throw new TypeError('sqft must be a number');
     }
   }
 
