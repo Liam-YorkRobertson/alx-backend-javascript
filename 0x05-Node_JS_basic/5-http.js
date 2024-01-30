@@ -8,6 +8,7 @@ const app = http.createServer(async (req, res) => {
     res.end('Hello Holberton School!');
   } else if (req.url === '/students') {
     const data = await readFile(process.argv[2], 'utf-8');
+    // eslint-disable-next-line no-unused-vars, no-use-before-define
     const { length, fields, students } = processStudentData(data);
     res.setHeader('Content-Type', 'text/plain');
     res.end(`This is the list of our students\nNumber of students: ${length}\n${fields}`);
@@ -20,6 +21,7 @@ function processStudentData(data) {
   data.trim().split('\n').forEach((line, index) => {
     if (index !== 0) {
       length += 1;
+      // eslint-disable-next-line no-unused-vars
       const [firstname, lastname, age, field] = line.split(',').map((value) => value.trim());
       students[field] = (students[field] || []).concat(firstname);
     }
