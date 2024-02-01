@@ -7,21 +7,23 @@ const request = require('request');
 const apiUrl = 'http://localhost:7865';
 
 describe('Index page', () => {
-  it('Correct status code?', (done) => {
+  it('Check correct status code', (done) => {
     request(apiUrl, (err, res, body) => {
-      expect(response.statusCode).to.equal(200);
+      expect(res.statusCode).to.equal(200);
       done();
     });
   });
-  it('Correct result?', (done) => {
+  
+  it('Check correct result', (done) => {
     request(apiUrl, (err, res, body) => {
       expect(body).to.equal('Welcome to the payment system');
       done();
     });
   });
-  it('Content type is text/html?', (done) => {
+
+  it('Check content type is text/html', (done) => {
     request(apiUrl, (err, res, body) => {
-      expect(response.headers['content-type']).to.equal('text/html; charset=utf-8');
+      expect(res.headers['content-type']).to.equal('text/html; charset=utf-8');
       done();
     });
   });
