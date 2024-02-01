@@ -1,6 +1,6 @@
 // utils
 
-function utils(type, a, b) {
+function calculateNumber(type, a, b) {
   const roundedA = Math.round(a);
   const roundedB = Math.round(b);
 
@@ -20,5 +20,5 @@ function utils(type, a, b) {
 }
 
 module.exports = {
-  utils,
+  calculateNumber,
 };

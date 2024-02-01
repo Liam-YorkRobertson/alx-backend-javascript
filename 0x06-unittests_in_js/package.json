@@ -3,7 +3,8 @@
     "test": "mocha"
   },
   "devDependencies": {
-    "chai": "^5.0.3",
+    "chai": "4.2.0",
+    "esm": "^3.2.25",
     "mocha": "^10.2.0",
     "sinon": "^17.0.1"
   }

@@ -7,8 +7,8 @@ const Utils = require('./utils');
 const paymentModule = require('./3-payment');
 
 describe('sendPaymentRequestToApi', () => {
-  it('validate usage of Utils.utils', () => {
-    const spy = sinon.spy(Utils, 'utils');
+  it('validate usage of Utils.calculateNumber', () => {
+    const spy = sinon.spy(Utils, 'calculateNumber');
     paymentModule.sendPaymentRequestToApi(100, 20);
     assert(spy.calledWith('SUM', 100, 20));
     spy.restore();
